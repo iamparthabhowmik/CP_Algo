@@ -12,7 +12,7 @@ public:
         if(low==high) {seg[ind]=arr[low]; return;}
         // compute
         int mid=(high+low)/2;
-        build(2*ind+1,low,mid,arr);
+        build(2*ind+1,low,mid,arr); // o based indexing
         build(2*ind+2,mid+1,high,arr);
         seg[ind]=min(seg[2*ind+1],seg[2*ind+2]);
     }
